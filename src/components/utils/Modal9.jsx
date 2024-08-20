@@ -40,7 +40,7 @@ export default function MyModal9({open, handleClose, myDate, formData, handleCha
     })
     .then((res) =>{
       console.log(res)
-      navigate('/calendar9'); 
+      window.location.reload()
     })
 
   }
