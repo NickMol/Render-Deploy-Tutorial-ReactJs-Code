@@ -9,6 +9,7 @@ import MytextForm from '../forms/createforms/MyTextForm';
 import MyButton from '../forms/createforms/MyButton';
 import AxiosInstance from '../AxiosInstance';
 import dayjs from 'dayjs';
+import { useNavigate } from 'react-router-dom';
 
 const style = {
   position: 'absolute',
@@ -23,6 +24,7 @@ const style = {
 };
 
 export default function MyModal9({open, handleClose, myDate, formData, handleChange}) {
+  const navigate = useNavigate();
 
   const submission = (event) =>{
     event.preventDefault()
@@ -38,7 +40,7 @@ export default function MyModal9({open, handleClose, myDate, formData, handleCha
     })
     .then((res) =>{
       console.log(res)
-      window.location.reload()
+      navigate('/calendar9'); 
     })
 
   }
